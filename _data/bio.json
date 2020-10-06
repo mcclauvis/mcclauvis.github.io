@@ -1,52 +1,47 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
-    "label": "Student",
+    "name": "MINOUMISSEK CEDRIGUE CLAUVIS",
+    "label": "Python and automatisation | Odoo | Data Science| Machine Learning |",
     "picture": "https://techfolios.github.io/template/images/molly.png",
-    "email": "molly@hawaii.edu",
-    "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
+    "email": "mc0clauvis@gmail.com",
+    "phone": "+237 6 78 10 61 55",
+    "website": "https://mcclauvis.github.io",
     "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2020.",
     "location": {
       "address": "",
-      "postalCode": "96822",
-      "city": "Honolulu",
-      "countryCode": "USA",
-      "region": "Hawaii"
+      "postalCode": "",
+      "city": "Yaoundé",
+      "countryCode": "CM",
+      "region": ""
     },
     "profiles": [
       {
         "network": "github",
-        "username": "mmaluhia",
-        "url": "http://github.com/changeme"
+        "username": "mcclauvis",
+        "url": "http://github.com/mcclauvis"
       },
       {
         "network": "linkedin",
-        "username": "mollymaluhia",
-        "url": "http://linkedin.com/in/changeme"
+        "username": "Cedrigue Clauvis Minoumissek",
+        "url": "https://www.linkedin.com/in/cedrigue-clauvis-minoumissek-990893103/"
       },
       {
         "network": "twitter",
-        "username": "mollymal",
-        "url": "http://twitter.com/changeme"
-      },
-      {
-        "network": "instagram",
-        "username": "molly",
-        "url": "http://instagram.com/changeme"
+        "username": "minoumissek",
+        "url": "http://twitter.com/minoumissek"
       }
     ]
   },
   "interests": [
     {
-      "name": "internet of things",
+      "name": "Odoo",
       "keywords": [
-        "Arduino",
-        "TI MSP430"
+        "ERP",
+        "CRM"
       ]
     },
     {
-      "name": "data mining",
+      "name": "data Science",
       "keywords": [
       ]
     },
@@ -61,32 +56,28 @@
       "name": "Languages and Frameworks",
       "level": "",
       "keywords": [
-        "C",
-        "C++",
-        "Java",
+        "PYTHON",
         "Javascript",
-        "Assembly",
-        "Common Lisp"
+        "XML",
+        "OWL"
       ]
     },
     {
       "name": "Toolsets/OS",
       "level": "",
       "keywords": [
-        "MacOS",
         "Ubuntu",
         "Git/GitHub",
-        "g++",
-        "TI LaunchPad"
+        "VS Code"
       ]
     }
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
+      "institution": "University of Yaou Indé, Yaoundé,",
       "area": "Computer Science (expected Spring, 2018)",
       "studyType": "B.S.",
-      "startDate": "2013-09-01",
+      "startDate": "10/09/2011",
       "endDate": "Present",
       "gpa": "",
       "courses": [
