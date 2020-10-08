@@ -115,12 +115,30 @@
     }
   ],
   "work": [
+
+    {
+      "company": "FREELANCE",
+      "position": "Odoo Python Developer",
+      "website": "https://minoumissek.cf",
+      "startDate": "2020-08-10",
+      "endDate": "Present",
+      "summary": "Réaliser l'analyse, le développement de projets sur l'ERP Odoo",
+      "highlights": [
+        "Réaliserer les études fonctionnelles et techniques (spécifications)",
+        "Améliorer les modules, développer et configurer des fonctionnalités",
+        "Assurer la maintenance de l'ERP et des modules existants.",
+        "Rédigerer la documentation des applications réalisées à l'attention des futurs utilisateurs.",
+        "Optimiser la base de code déjà utilisée.",
+        "Développer des solutions dans ou hors de l'ERP (modules de paiement, interfaces, etc…)",
+        "Implication dans la communauté Odoo."
+      ]
+    },
     {
       "company": "AFREETECH CONSULTING",
       "position": "Odoo Python Developer",
       "website": "https://www.afreetech.com",
       "startDate": "2019-08-10",
-      "endDate": "Present",
+      "endDate": "2020-10-30",
       "summary": "Réaliser l'analyse, le développement de projets sur l'ERP Odoo",
       "highlights": [
         "Réaliserer les études fonctionnelles et techniques (spécifications)",
@@ -140,7 +158,7 @@
       "endDate": "Present",
       "summary": "",
       "highlights": [
-        ""      ]
+              ]
     }
   ],
   "references": [
