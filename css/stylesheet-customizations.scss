@@ -7,8 +7,8 @@
 
 // Customize the background color
 body {
-   background-color: lightsteelblue;
-   //background-color: #FAFAFA;
+   //background-color: lightsteelblue;
+   background-color: #FAFAFA;
 }
 
 // Customize the menubar color
@@ -55,3 +55,21 @@ body {
      color: white !important;
    }
  }
+
+
+ // "Read More" buttons
+a.ui.bottom.attached.button {
+   color: white;
+   background: lighten(lightsteelblue, 5%);
+ 
+   &:hover {
+      background: lighten(lightsteelblue, 15%);
+   }
+ }
+ 
+ // Tag pill boxes
+ div.ui.basic.label {
+   color: white;
+   background: lighten(lightsteelblue, 5%);
+ }
+ 
