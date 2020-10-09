@@ -47,9 +47,9 @@ body {
 }
 // Home page buttons (projects, essays, cv, etc)
 .ui.basic.button, .ui.basic.buttons .button {
-   color: darken(lightsteelblue, 20%);
+   background-color: lightsteelblue;
  
    &:hover {
-      color: darken(lightsteelblue, 20%);
+      background-color: blue;
    }
  }
