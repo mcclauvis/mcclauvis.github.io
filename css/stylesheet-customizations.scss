@@ -47,11 +47,11 @@ body {
 }
 // Home page buttons (projects, essays, cv, etc)
 .ui.basic.button, .ui.basic.buttons .button {
-   background: lighten(blue, 5%) !important;
+   background: lighten(lightsteelblue, 5%) !important;
    color: white !important;
  
    &:hover {
-     background: lighten(blue, 15%) !important;
+     background: lighten(lightsteelblue, 15%) !important;
      color: white !important;
    }
  }
