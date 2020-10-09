@@ -45,3 +45,13 @@ body {
 .ui.card>.image>img, .ui.cards>.card>.image>img {
    background-color: #fff;
 }
+// Home page buttons (projects, essays, cv, etc)
+.ui.basic.button, .ui.basic.buttons .button {
+   background: $uh-blue-light !important;
+   color: white !important;
+ 
+   &:hover {
+     background: $uh-blue !important;
+     color: white !important;
+   }
+ }
