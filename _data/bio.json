@@ -1,13 +1,13 @@
 {
   "basics": {
     "name": "MINOUMISSEK CEDRIGUE CLAUVIS",
-    "label": "Student",
+    "label": "Développeur ODOO ERP & Support",
     "picture": "/pic.jpg",
     "email": "mc0clauvis@gmail.com",
-    "phone": "",
+    "phone": "+237 698268750",
     "website": "https://mcclauvis.github.io",
-    "summary": "Dedicated Odoo Technical Developer and Support Specialist with a proven track record of delivering high-quality solutions and exceptional support to clients across diverse industries. Adept at leveraging technical expertise and deep knowledge of the Odoo platform to streamline business processes, enhance efficiency, and drive digital transformation. Proficient in custom module development, system integration, and troubleshooting, ensuring seamless Odoo ERP implementations. Skilled in analyzing client requirements, designing effective solutions, and providing ongoing technical assistance and maintenance. Committed to staying updated with the latest Odoo developments and best practices to consistently deliver innovative solutions and outstanding customer satisfaction. A collaborative team player known for effective communication, problem-solving abilities, and a passion for helping organizations harness the full potential of Odoo for their success.",
-    "location": { "address": "", "postalCode": "BP 00", "city": "YAOUNDÉ", "countryCode": "CMR", "region": "YAOUNDÉ" },
+    "summary": "Je suis un développeur technique Odoo dévoué et compétent avec une solide expérience dans le développement personnalisé, la configuration de modules, et la fourniture d'un support technique exceptionnel. Mon expertise en Odoo s'étend sur plusieurs années, ce qui m'a permis de maîtriser les aspects les plus complexes de cette plateforme ERP. Je suis passionné par la création de solutions innovantes qui répondent aux besoins uniques de mes clients tout en maintenant une efficacité opérationnelle maximale.",
+    "location": { "address": "", "postalCode": "", "city": "YAOUNDÉ", "countryCode": "CMR", "region": "CENTRE" },
     "profiles": [
       { "network": "github", "username": "mcclauvis", "url": "http://github.com/mcclauvis" },
       { "network": "linkedin", "username": "Cedrigue Clauvis Minoumissek", "url": "https://www.linkedin.com/in/cedrigue-clauvis-minoumissek-990893103/" },
@@ -32,95 +32,100 @@
   ],
   "skills": [
     {
-      "name": "Languages and Frameworks",
+      "name": "Langages et Frameworks",
       "keywords": [ "PYTHON", "ODOO OWL", "SQL", "Javascript", "PANDAS", "XML" , "QWEB", "HTML", "CSS"]
     },
     {
-      "name": "Toolsets/OS",
-      "keywords": [ "Ubuntu SERVER", "Git/GitHub", "g++", "DIGITAL OCEAN" ]
+      "name": "Outils/Systèmes d'exploitation",
+      "keywords": [ "Ubuntu SERVER", "Git/GitHub/GitLab", "Odoo.sh", "DIGITAL OCEAN" ]
     }
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
-      "studyType": "B.S.",
-      "startDate": "2013-09-01",
-      "endDate": "Present",
+      "institution": "UNIVERSITÉ PICARDIE JULES VERNES D'AMIENS, Amiens, FR",
+      "area": "MAÎTRISE DE SCIENCE,TECHNO mention MÉTHODES INFORMATIQUES APPLIQUÉES À LA GESTION DES ENTREPRISES",
+      "studyType": "",
+      "startDate": "2017-01-10",
+      "endDate": "2019-02-28",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "UNIVERSITÉ de YAOUNDÉ 1, YAOUNDÉ, CMR",
+      "area": "LICENCE EN INFORMATIQUE",
+      "studyType": "",
+      "startDate": "2011-10-05",
+      "endDate": "2015-07-30",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "ECOLE NORMALE SUPÉRIEURE DE YAOUNDÉ, YAOUNDÉ, CMR",
+      "area": "DIPLÔME DE PROFESSEUR DE L'ENSEIGNEMENT SECONDAIRE 1ER GRADE EN INFORMATIQUE",
+      "studyType": "",
+      "startDate": "2011-10-05",
+      "endDate": "2014-07-30",
       "courses": [
       ]
     }
+
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
-      "website": "",
-      "startDate": "2015-08-01",
+      "company": "GLOBAL EDGE SOFTWARE LTD",
+      "position": "Odoo Technical Developer and Support",
+      "website": "https://www.globaledge-software.com/",
+      "startDate": "2023-03-27",
       "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
+      "summary": "Odoo Technical Developer and Support",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        "Personnalisation, Intégration et  maintenance du système ERP Odoo sur Odoo.sh, Odoo Cloud et sur serveur local;",
+        "Migration des données d'autres systèmes(Quickbook,Sage) vers odoo;",
+        "Personnalisation et Développement de nouveaux  modules;",
+        "Intégration avec d'autres logiciels;",
+        "Formation des utilisateurs;",
+        "Mise à niveau d'Odoo;",
+        "Support utilisateur ."
       ]
     },
     {
-      "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
-      "summary": "",
+      "company": "AFREETECH CAMEROUN",
+      "position": "Développeur Python Odoo",
+      "website": "https://afreetech.com/",
+      "startDate": "2019-08-05",
+      "endDate": "2023-03-15",
+      "summary": "Développeur Python Odoo",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
+        "Personnalisation et Développement de nouveaux  modules;",
+        "déterminer et documenter les besoins des clients;",
+        "effectuer des études techniques et commerciales."
+      ]
+    },
+    {
+      "company": "MINISTERE DE LA FONCTION PUBLIQUE ET DE LA REFORME ADMINISTRATIVE DU CAMEROUN",
+      "position": "Enseignant d'informatique au niveau secondaire",
+      "website": "https://www.minesec.gov.cm/",
+      "startDate": "2015-02-15",
+      "endDate": "2021-06-30",
+      "summary": "Enseignant d'informatique au niveau secondaire",
+      "highlights": [
+        "Préparer la matière à enseigner aux élèves conformément au programme approuvé;",
+        "Distribuer et corriger les devoirs;",
+        "Préparer, faire passer et corriger des examens;",
+        "Évaluer les progrès des élèves et discuter des résultats avec les élèves, les parents et les autorités scolaires;",
+        "Participer à des réunions du personnel, des conférences éducatives et des ateliers de formation destinés aux enseignants."
       ]
     }
+
   ],
   "volunteer": [
-    {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
-      "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
-      ]
-    },
-    {
-      "organization": "",
-      "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
-      "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
-      ]
-    }
+
   ],
   "awards": [
-    {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
-    },
-    {
-      "title": "First place",
-      "date": "2015",
-      "awarder": "University of Hawaii Micromouse Competition",
-      "summary": "My team won first place in 2015.  See my portfolio site for more details."
-    }
   ],
   "references": [
     {
-      "name": "Available upon request"
+      "name": "Disponible sur demande"
     }
   ]
 }
