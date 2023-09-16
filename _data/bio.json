@@ -1,0 +1,131 @@
+{
+  "basics": {
+    "name": "MINOUMISSEK CEDRIGUE CLAUVIS",
+    "label": "Développeur ODOO ERP & Support",
+    "picture": "/pic.jpg",
+    "email": "mc0clauvis@gmail.com",
+    "phone": "+237 698268750",
+    "website": "https://mcclauvis.github.io",
+    "summary": "Je suis un développeur technique Odoo dévoué et compétent avec une solide expérience dans le développement personnalisé, la configuration de modules, et la fourniture d'un support technique exceptionnel. Mon expertise en Odoo s'étend sur plusieurs années, ce qui m'a permis de maîtriser les aspects les plus complexes de cette plateforme ERP. Je suis passionné par la création de solutions innovantes qui répondent aux besoins uniques de mes clients tout en maintenant une efficacité opérationnelle maximale.",
+    "location": { "address": "", "postalCode": "", "city": "YAOUNDÉ", "countryCode": "CMR", "region": "CENTRE" },
+    "profiles": [
+      { "network": "github", "username": "mcclauvis", "url": "http://github.com/mcclauvis" },
+      { "network": "linkedin", "username": "Cedrigue Clauvis Minoumissek", "url": "https://www.linkedin.com/in/cedrigue-clauvis-minoumissek-990893103/" },
+      { "network": "twitter", "username": "mcclauvis", "url": "http://twitter.com/mcclauvis" }    ]
+  },
+  "interests": [
+    { "name": "PYTHON" },
+    { "name": "ODOO ERP" },
+    { "name": "BUSINESS ANALYST"},
+    { "name": "ACCOUNTING" },
+    { "name": "ODOO DEVELOPMENT"},
+    { "name": "ODOO.SH"},
+    { "name": "ODOO OWL"},
+    { "name": "DATABASE MANAGEMENT" },
+    { "name": "PYTHON"},
+    { "name": "PROJECT MANAGEMENT"},
+    { "name": "API Integration"},
+    { "name": "SQL"},
+    { "name": "PANDAS" },
+    { "name": "BUSINESS FLOW" },
+    { "name": "DATA ANALYST" }
+  ],
+  "skills": [
+    {
+      "name": "Langages et Frameworks",
+      "keywords": [ "PYTHON", "ODOO OWL", "SQL", "Javascript", "PANDAS", "XML" , "QWEB", "HTML", "CSS"]
+    },
+    {
+      "name": "Outils/Systèmes d'exploitation",
+      "keywords": [ "Ubuntu SERVER", "Git/GitHub/GitLab", "Odoo.sh", "DIGITAL OCEAN" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "UNIVERSITÉ PICARDIE JULES VERNES D'AMIENS, Amiens, FR",
+      "area": "MAÎTRISE DE SCIENCE,TECHNO mention MÉTHODES INFORMATIQUES APPLIQUÉES À LA GESTION DES ENTREPRISES",
+      "studyType": "",
+      "startDate": "2017-01-10",
+      "endDate": "2019-02-28",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "UNIVERSITÉ de YAOUNDÉ 1, YAOUNDÉ, CMR",
+      "area": "LICENCE EN INFORMATIQUE",
+      "studyType": "",
+      "startDate": "2011-10-05",
+      "endDate": "2015-07-30",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "ECOLE NORMALE SUPÉRIEURE DE YAOUNDÉ, YAOUNDÉ, CMR",
+      "area": "DIPLÔME DE PROFESSEUR DE L'ENSEIGNEMENT SECONDAIRE 1ER GRADE EN INFORMATIQUE",
+      "studyType": "",
+      "startDate": "2011-10-05",
+      "endDate": "2014-07-30",
+      "courses": [
+      ]
+    }
+
+  ],
+  "work": [
+    {
+      "company": "GLOBAL EDGE SOFTWARE LTD",
+      "position": "Odoo Technical Developer and Support",
+      "website": "https://www.globaledge-software.com/",
+      "startDate": "2023-03-27",
+      "endDate": "Present",
+      "summary": "Odoo Technical Developer and Support",
+      "highlights": [
+        "Personnalisation, Intégration et  maintenance du système ERP Odoo sur Odoo.sh, Odoo Cloud et sur serveur local;",
+        "Migration des données d'autres systèmes(Quickbook,Sage) vers odoo;",
+        "Personnalisation et Développement de nouveaux  modules;",
+        "Intégration avec d'autres logiciels;",
+        "Formation des utilisateurs;",
+        "Mise à niveau d'Odoo;",
+        "Support utilisateur ."
+      ]
+    },
+    {
+      "company": "AFREETECH CAMEROUN",
+      "position": "Développeur Python Odoo",
+      "website": "https://afreetech.com/",
+      "startDate": "2019-08-05",
+      "endDate": "2023-03-15",
+      "summary": "Développeur Python Odoo",
+      "highlights": [
+        "Personnalisation et Développement de nouveaux  modules;",
+        "déterminer et documenter les besoins des clients;",
+        "effectuer des études techniques et commerciales."
+      ]
+    },
+    {
+      "company": "MINISTERE DE LA FONCTION PUBLIQUE ET DE LA REFORME ADMINISTRATIVE DU CAMEROUN",
+      "position": "Enseignant d'informatique au niveau secondaire",
+      "website": "https://www.minesec.gov.cm/",
+      "startDate": "2015-02-15",
+      "endDate": "2021-06-30",
+      "summary": "Enseignant d'informatique au niveau secondaire",
+      "highlights": [
+        "Préparer la matière à enseigner aux élèves conformément au programme approuvé;",
+        "Distribuer et corriger les devoirs;",
+        "Préparer, faire passer et corriger des examens;",
+        "Évaluer les progrès des élèves et discuter des résultats avec les élèves, les parents et les autorités scolaires;",
+        "Participer à des réunions du personnel, des conférences éducatives et des ateliers de formation destinés aux enseignants."
+      ]
+    }
+
+  ],
+  "volunteer": [
+
+  ],
+  "awards": [
+  ],
+  "references": [
+    {
+      "name": "Disponible sur demande"
+    }
+  ]
+}
