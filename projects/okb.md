@@ -1,17 +1,21 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
-title: "Cotton"
-date: 2014
+image: img/okb/okb.jpg
+title: "OKB|Automative Paint & Detailling Supplies"
+date: 2023
 published: true
 labels:
-  - Lisp
-  - GitHub
-summary: "A text adventure game I developed for ICS 313."
+  - Odoo ERP
+  - Sale
+  - Inventory
+  - Odoo.sh
+  - Accounting
+
+summary: "OKB|Automative Paint & Detailling Supplies"
 ---
 
-<img class="img-fluid" src="../img/cotton/cotton-header.png">
+<img class="img-fluid" src="../img/okb/okb2.jpg">
 
 Cotton is a horror-esque text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
 
