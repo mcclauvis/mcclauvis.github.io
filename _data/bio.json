@@ -4,8 +4,8 @@
     "label": "Développeur ODOO ERP & Support",
     "picture": "/pic.jpg",
     "email": "mc0clauvis@gmail.com",
-    "phone": "+237 698268750",
-    "website": "https://mcclauvis.github.io",
+    "whatsapp": "+237 698268750",
+    "website": "https://www.minoumissek.com/",
     "summary": "Je suis un développeur technique Odoo dévoué et compétent avec une solide expérience dans le développement personnalisé, la configuration de modules, et la fourniture d'un support technique exceptionnel. Mon expertise en Odoo s'étend sur plusieurs années, ce qui m'a permis de maîtriser les aspects les plus complexes de cette plateforme ERP. Je suis passionné par la création de solutions innovantes qui répondent aux besoins uniques de mes clients tout en maintenant une efficacité opérationnelle maximale.",
     "location": { "address": "", "postalCode": "", "city": "YAOUNDÉ", "countryCode": "CMR", "region": "CENTRE" },
     "profiles": [
@@ -72,11 +72,28 @@
   ],
   "work": [
     {
+      "company": "LES LOGICIELS DECIDE4ACTION",
+      "position": "Technical Support ERP",
+      "website": "https://decide4action.com/fr/",
+      "startDate": "2024-01-28",
+      "endDate": "Present",
+      "summary": "Technical Support ERP",
+      "highlights": [
+        "Personnalisation, Intégration et  maintenance du système ERP Odoo sur Odoo.sh, Odoo Cloud et sur serveur local;",
+        "Migration des données d'autres systèmes(Quickbook,Sage) vers odoo;",
+        "Personnalisation et Développement de nouveaux  modules;",
+        "Intégration avec d'autres logiciels;",
+        "Formation des utilisateurs;",
+        "Mise à niveau d'Odoo;",
+        "Support utilisateur ."
+      ]
+    },
+    {
       "company": "GLOBAL EDGE SOFTWARE LTD",
       "position": "Odoo Technical Developer and Support",
       "website": "https://www.globaledge-software.com/",
       "startDate": "2023-03-27",
-      "endDate": "Present",
+      "endDate": "2023-11-07",
       "summary": "Odoo Technical Developer and Support",
       "highlights": [
         "Personnalisation, Intégration et  maintenance du système ERP Odoo sur Odoo.sh, Odoo Cloud et sur serveur local;",
