@@ -8,9 +8,12 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
+group :jekyll_plugins do
+  gem "jekyll-polyglot"
+end
+
 gem "webrick", "~> 1.7"
 gem 'html-proofer'
 gem 'jekyll-gist'
 gem 'rouge'
-gem 'jekyll-multiple-languages-plugin'
 

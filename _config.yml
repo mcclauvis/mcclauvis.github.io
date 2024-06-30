@@ -30,13 +30,9 @@ include:
   - _data
 plugins:
   - jekyll-gist
-  - jekyll-multiple-languages-plugin
+
 
 languages: ["fr","en"]
-exclude_from_localizations: ["assets", "images"]
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      lang: "fr"
+default_lang: "fr"
+exclude_from_localization: ["javascript", "images", "css", "public"]
+parallel_localization: true
