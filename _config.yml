@@ -32,7 +32,7 @@ plugins:
   - jekyll-gist
 
 
-languages: ["fr","en"]
-default_lang: "fr"
-exclude_from_localization: ["javascript", "images", "css", "public"]
-parallel_localization: true
+# languages: ["fr","en"]
+# default_lang: "fr"
+# exclude_from_localization: ["javascript", "images", "css", "public"]
+# parallel_localization: true
