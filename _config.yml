@@ -32,8 +32,11 @@ plugins:
   - jekyll-gist
   - jekyll-multiple-languages-plugin
 
-languages:
-  - en
-  - fr
-default_lang: fr
+languages: ["fr","en"]
+exclude_from_localizations: ["assets", "images"]
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: "fr"
