@@ -6,7 +6,7 @@
     "email": "mc0clauvis@gmail.com",
     "whatsapp": "+237 698268750",
     "website": "https://www.minoumissek.com/",
-    "summary": "Consultant fonctionnel certifié en intégration et développement Odoo ERP, spécialisé dans l'automatisation des processus métier et la gestion des flux comptables. Expérience en support technique niveau 2 chez Decide4Action. Actuellement en construction d’un site web personnel pour promouvoir mes services en intégration ERP. Intéressé par les opportunités aux États-Unis et en quête de certifications stratégiques pour renforcer mon attractivité sur ce marché.",
+    "summary": "Passionné par l'intégration et le développement ERP, je suis un expert en Odoo avec plusieurs années d'expérience en personnalisation, intégration et maintenance de cette plateforme. J’accompagne les entreprises dans l’optimisation de leurs processus métier grâce à des solutions sur mesure et évolutives.",
     "location": { "address": "", "postalCode": "", "city": "Quebec city", "countryCode": "CA", "region": "QUEBEC" },
     "profiles": [
       { "network": "github", "username": "mcclauvis", "url": "http://github.com/mcclauvis" },
@@ -88,7 +88,7 @@
       "company": "LES LOGICIELS DECIDE4ACTION",
       "position": "Technical Support ERP",
       "website": "https://decide4action.com/fr/",
-      "startDate": "2024-01-28",
+      "startDate": "28-01-2024",
       "endDate": "Present",
       "summary": "Technical Support ERP",
       "highlights": [
@@ -106,8 +106,8 @@
       "company": "GLOBAL EDGE SOFTWARE LTD",
       "position": "Odoo Technical Developer and Support",
       "website": "https://www.globaledge-software.com/",
-      "startDate": "2023-03-27",
-      "endDate": "2023-11-07",
+      "startDate": "07-03-2023",
+      "endDate": "07-11-2023",
       "summary": "Odoo Technical Developer and Support",
       "highlights": [
         "Personnalisation, Intégration et  maintenance du système ERP Odoo sur Odoo.sh, Odoo Cloud et sur serveur local;",
@@ -123,8 +123,8 @@
       "company": "AFREETECH CAMEROUN",
       "position": "Développeur Python Odoo",
       "website": "https://afreetech.com/",
-      "startDate": "2019-08-05",
-      "endDate": "2023-03-15",
+      "startDate": "05-08-2019",
+      "endDate": "15-03-2023",
       "summary": "Développeur Python Odoo",
       "highlights": [
         "Personnalisation et Développement de nouveaux  modules;",
@@ -136,8 +136,8 @@
       "company": "MINISTERE DE LA FONCTION PUBLIQUE ET DE LA REFORME ADMINISTRATIVE DU CAMEROUN",
       "position": "Enseignant d'informatique au niveau secondaire",
       "website": "https://www.minesec.gov.cm/",
-      "startDate": "2015-02-15",
-      "endDate": "2021-06-30",
+      "startDate": "15-02-2015",
+      "endDate": "30-06-2021",
       "summary": "Enseignant d'informatique au niveau secondaire",
       "highlights": [
         "Préparer la matière à enseigner aux élèves conformément au programme approuvé;",
