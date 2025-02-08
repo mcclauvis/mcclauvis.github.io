@@ -2,10 +2,8 @@
 title: Resume
 layout: home
 ---
-
 <div style="background-color: var(--tf-page-bg-color)" class="bg-gradient py-3">
   <div class="container">
-
     <div class="row">
       <div class="col">
         <h1 class="display-4 text-center">{{ site.data.bio.basics.name }}</h1>
@@ -64,6 +62,21 @@ layout: home
                 {{ keyword }}{% if forloop.last != true %}, {% endif %}
               {% endfor %}
           </p>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if site.data.bio.certif %}
+    <div class="row pt-4 align-items-center">
+      <div class="col-lg-3">
+        <h1 class="display-6 text-start m-0">Certification(s)</h1>
+      </div>
+      <div class="col-lg-9">
+        {% for entry in site.data.bio.certif %}
+        <p class="mb-0"><b>{{ entry.name }}</b></p>
+        <p class="mb-0">Du {{ entry.date }}</p>
+        <p class="mb-0"><a href="{{ entry.url }}">{{ entry.url | remove: "http://" | remove: "https://" }}</a></p>
         {% endfor %}
       </div>
     </div>
@@ -243,3 +256,4 @@ layout: home
     {% endif %}
   </div>
 </div>
+

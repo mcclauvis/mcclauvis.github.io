@@ -30,6 +30,7 @@ include:
   - _data
 plugins:
   - jekyll-gist
+  - jekyll-sitemap
 
 
 # languages: ["fr","en"]

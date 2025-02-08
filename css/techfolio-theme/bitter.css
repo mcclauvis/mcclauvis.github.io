@@ -31,3 +31,30 @@ a {
   background-color: var(--bs-white);
   border-top: none;
 }
+/* Mode sombre */
+:root {
+  --tf-bg-color: #ffffff;
+  --tf-text-color: #000000;
+  --tf-link-color: #076db3;
+  --tf-footer-bg-color: #f8f9fa;
+}
+
+.dark-mode {
+  --tf-bg-color: #121212;
+  --tf-text-color: #ffffff;
+  --tf-link-color: #1e90ff;
+  --tf-footer-bg-color: #1a1a1a;
+}
+
+body {
+  background-color: var(--tf-bg-color);
+  color: var(--tf-text-color);
+}
+
+a {
+  color: var(--tf-link-color);
+}
+
+footer {
+  background-color: var(--tf-footer-bg-color);
+}
