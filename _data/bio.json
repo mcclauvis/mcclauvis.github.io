@@ -34,10 +34,6 @@
   ],
   "skills": [
     {
-      "name": "Certification",
-      "keywords": [ "ODOO FONCTIONNELLE V18"]
-    },
-    {
       "name": "Langages et Frameworks",
       "keywords": [ "PYTHON", "ODOO OWL", "SQL", "Javascript", "PANDAS", "XML" , "QWEB", "HTML", "CSS"]
     },
