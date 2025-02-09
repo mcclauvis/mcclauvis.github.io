@@ -94,7 +94,6 @@
         "Effectuer des requêtes T-SQL pour extraire des données et analyser des problèmes liés aux bases de données.;",
         "Proposer des améliorations pour réduire la récurrence des incidents.;",
         "Formation des utilisateurs;",
-        "Mise à niveau d'Odoo;",
         "Support utilisateur ."
       ]
     },
@@ -120,9 +119,12 @@
       "endDate": "15-03-2023",
       "summary": "Développeur Python Odoo",
       "highlights": [
-        "Personnalisation et Développement de nouveaux  modules;",
-        "déterminer et documenter les besoins des clients;",
-        "effectuer des études techniques et commerciales."
+        "<b>Projet de gestion d’un établissement scolaire Supérieur adapté au système éducatif camerounais avec Odoo community V15 pour l'ESS/UCAC.</b>    -Collecte des besoins client, analyse, conception et intégration dans l’ERP de modules  de gestion des notes, gestion de la scolarité,gestion de la facturation des frais de scolarité,gestion de la discipline,gestion des étudiants et gestion des emplois de temps;   -Realisation du reporting excel et pdf .",
+        "<b>Projet de mise en place d'un CRM avec odoo community V12 pour la CAMPOST.</b>   -Collecte des besoins client, analyse, conception et intégration dans l’ERP de modules de gestion des prtoduits et de gestion du Parc automobile;   -Realisation du reporting excel et pdf .",
+        "<b>Projet de gestion d’un établissement scolaire secondaire adapté au système éducatif camerounais avec Odoo community V13 pour plusieurs lycées de la ville de Yaoundé.</b>   -Collecte des besoins client, analyse, conception et intégration dans l’ERP de modules  de gestion de la facturation;   -Realisation du reporting excel et pdf",
+        "<b>Projet de Gestion de la facturation, des quotes-parts pour le laboratoire d’analyse et d’imagerie médicale avec Odoo community V13.</b>   -Collecte des besoins client, analyse, conception et intégration dans l’ERP de modules  de gestion de la facturation;   -Realisation du reporting excel et pdf .",
+        "<b>Projet de mise en place d'un ERP avec odoo community V12 pour la CAMPOST.</b>   -Collecte des besoins client, analyse, conception et intégration dans l’ERP de modules  de gestion de la discipline et des congés    -Realisation du reporting excel et pdf pour les rapports financiers et comptable de la zone OHADA;   -Realisation du reporting excel et pdf pour les rapports de la Paie au format de l'Etat Camerounais;",
+        "<b>Projet de mise en place d'un ERP avec odoo community V10 pour la Mipromalo.</b>   -Collecte des besoins client, analyse, conception et intégration dans l’ERP de modules  de gestion de la discipline et des congés   -Realisation du reporting excel et pdf pour les rapports financiers et comptable de la zone OHADA;   -Realisation du reporting excel et pdf pour les rapports de la Paie au format de l'Etat Camerounais."
       ]
     },
     {
