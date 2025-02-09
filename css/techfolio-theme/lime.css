@@ -3,7 +3,7 @@
 /* Use Open Sans as the default font. */
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=satisfy&display=swap');
 
 /* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
 :root {
@@ -23,6 +23,10 @@
 h1,h2,h3,h4,h5 {
   color: var(--tf-green1);
   font-family: Pacifico;
+}
+
+p {
+  font-family: satisfy;
 }
 
 /* Format social media icons */
