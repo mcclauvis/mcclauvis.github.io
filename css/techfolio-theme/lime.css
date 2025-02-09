@@ -2,8 +2,10 @@
 
 /* Use Open Sans as the default font. */
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
-@import url('https://fonts.googleapis.com/css2?family=satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 /* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
 :root {
@@ -11,7 +13,7 @@
   --tf-green2: #4FA64F;
   --tf-green3: #85C285;
   --tf-green4: #e0f2df;
-  --bs-font-sans-serif: "Open Sans", sans-serif;
+  --bs-font-sans-serif: "Oswald", sans-serif;
   --bs-link-color: var(--tf-green1);
   --tf-pill-bg: var(--tf-green3);
   --tf-icon-fill: var(--tf-green1);
@@ -24,8 +26,13 @@ h1,h2,h3,h4,h5 {
   color: var(--tf-green1);
 }
 
+h1 {
+  color: var(--tf-green1);
+  font-family: Lobster;
+}
+
 p,a {
-  font-family: satisfy;
+  font-family: Satisfy;
 }
 
 /* Format social media icons */
