@@ -4,6 +4,7 @@ type: essay
 title: "Implémenter un ERP Odoo dans une PME de fabrication métallique : Guide pratique pour les dirigeants"
 # All dates must be YYYY-MM-DD format!
 date: 26-08-2024
+image: img/reussir/pprojet_erp2.png
 published: true
 labels:
   - Odoo
@@ -13,7 +14,7 @@ labels:
   - Fabrication
 ---
 
-<img width="100px" class="rounded float-start pe-4" src="../img/igniting/paintbrushes.jpg">
+<img width="300px" class="rounded float-start pe-4" src="../img/reussir/pprojet_erp2.png">
 
 L'implémentation d’un ERP est une démarche stratégique pour moderniser la gestion d’une entreprise industrielle. Dans le secteur de la métallurgie, les défis sont nombreux : gestion de la production complexe, suivi précis des coûts, respect des réglementations sociales et bien d’autres enjeux. Cet article détaillé vous guide, étape par étape, dans l’implémentation d’un ERP Odoo pour une PME de fabrication métallique, en s’appuyant sur l’exemple fictif mais réaliste de l’entreprise MetalPro.
 
@@ -85,7 +86,7 @@ Simulation d’un cycle de production complet : Tester l’ensemble des processu
 Recueil des retours utilisateurs : Identifier les ajustements nécessaires.
 Mesure du ROI : Par exemple, MetalPro a pu constater une réduction de 30 % du temps de traitement de la paie dès le premier trimestre après implémentation.
 Conseil pratique : Établissez des indicateurs clés de performance (KPI) pour suivre l’efficacité et l’impact de l’ERP sur votre activité.
-
+<img width="300px" class="rounded float-start pe-4" src="../img/reussir/projet_erp.png">
 ```
 Mois 1 : Audit Préliminaire
    - Analyse des processus existants

@@ -4,13 +4,14 @@ type: essay
 title: "Réussir son projet ERP en fabrication 2025: guide pratique pour les manufacturiers québécois"
 # All dates must be YYYY-MM-DD format!
 date: 08-01-2025
+image: img/nouvodoo18/fab.png
 published: true
 labels:
   - ERP
   - MRP
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/smart-questions/rtfm.png">
+
 
 
 Lorsqu’il est question d’optimiser les opérations et d’accroître la compétitivité, l’implémentation d’un système ERP (Enterprise Resource Planning) se présente souvent comme la solution incontournable. Pour les entreprises de fabrication au Québec, l’ERP permet de centraliser l’information, d’automatiser les processus, d’améliorer la visibilité sur la chaîne de production et d’optimiser la gestion des ressources. Toutefois, la réussite d’un tel projet dépend d’une bonne préparation, de l’implication des équipes et du choix d’un logiciel adapté. Dans cet article, nous vous présentons un guide pratique pour mener à bien votre projet ERP en fabrication, en mettant l’accent sur Odoo comme solution de choix.
@@ -38,6 +39,8 @@ Un écosystème dynamique : étant open source, Odoo bénéficie d’une communa
 Adaptation aux normes et exigences locales : il est possible de configurer Odoo pour répondre aux particularités fiscales du Québec, comme la gestion de la TPS et de la TVQ.
 Interface conviviale et évolutive : Odoo est intuitif et évolutif, ce qui facilite la prise en main et la personnalisation en fonction de la croissance de l’entreprise.
 Possibilité de personnalisation et d’intégration : des intégrations spécifiques (EDI, eCommerce, gestion d’entrepôt, etc.) peuvent être développées pour répondre aux besoins propres de votre secteur manufacturier.
+
+<img width="300px" class="rounded float-start pe-4" src="../img/nouvodoo18/fab.png">
 
 ## 3. Les étapes clés pour réussir son projet ERP
 3.1. Définir ses objectifs et identifier ses besoins
