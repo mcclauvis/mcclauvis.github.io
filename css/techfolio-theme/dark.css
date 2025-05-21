@@ -1,0 +1,99 @@
+/* Dark theme overrides */
+body.dark-mode {
+  --bs-body-color: #e0e0e0; /* Lighter text for dark backgrounds */
+  --bs-body-bg: #121212;   /* Dark background for the body */
+  --bs-link-color: #bb86fc; /* A vibrant color for links, accessible on dark backgrounds */
+  --bs-link-hover-color: #d0b3ff;
+
+  /* Override Bootstrap global variables */
+  --bs-gray: #555555;
+  --bs-gray-100: #2a2a2a;
+  --bs-gray-200: #3c3c3c;
+  --bs-gray-300: #4f4f4f;
+  --bs-gray-400: #616161;
+  --bs-gray-500: #747474;
+  --bs-gray-600: #878787;
+  --bs-gray-700: #9a9a9a;
+  --bs-gray-800: #adadad;
+  --bs-gray-900: #c0c0c0;
+  --bs-white: #1e1e1e; /* Adjust white to a very dark gray or black for backgrounds */
+  --bs-black: #f0f0f0; /* Adjust black to a very light gray or white for text */
+
+  /* Techfolio specific variables */
+  --tf-pill-bg: var(--bs-gray-800); /* Darker pills */
+  --tf-icon-fill: var(--bs-gray-400); /* Icons need to be lighter */
+  --tf-page-bg-color: var(--bs-body-bg);
+  --tf-footer-bg-color: #1f1f1f; /* Slightly lighter than page bg for footer */
+  --tf-projects-bg-color: #272727; /* Slightly lighter than page bg for projects section */
+
+  /* Card specific overrides for dark mode */
+  --bs-card-bg: #222222;
+  --bs-card-border-color: #444444;
+  --bs-card-color: var(--bs-body-color);
+  --bs-card-cap-bg: #2a2a2a;
+  --bs-card-cap-color: var(--bs-body-color);
+  --bs-card-footer-bg: var(--bs-card-cap-bg); /* Ensure footer matches card styling */
+
+  /* Button overrides */
+  --bs-btn-color: var(--bs-black); /* Text color for buttons */
+  --bs-btn-bg: var(--bs-gray-700);
+  --bs-btn-border-color: var(--bs-gray-600);
+  --bs-btn-hover-bg: var(--bs-gray-600);
+  --bs-btn-hover-border-color: var(--bs-gray-500);
+  --bs-btn-active-bg: var(--bs-gray-500);
+  --bs-btn-active-border-color: var(--bs-gray-400);
+
+  --bs-btn-outline-color: var(--bs-gray-400); /* For outline buttons */
+  --bs-btn-outline-hover-color: var(--bs-body-bg);
+  --bs-btn-outline-hover-bg: var(--bs-gray-400);
+  --bs-btn-outline-active-bg: var(--bs-gray-500);
+
+
+  /* Navbar overrides */
+  --bs-navbar-color: rgba(240, 240, 240, 0.75); /* Lighter text for navbar */
+  --bs-navbar-hover-color: #f0f0f0;
+  --bs-navbar-disabled-color: rgba(240, 240, 240, 0.35);
+  --bs-navbar-active-color: #ffffff;
+  --bs-navbar-brand-color: var(--bs-navbar-active-color);
+  --bs-navbar-brand-hover-color: var(--bs-navbar-active-color);
+
+  /* Ensure header and footer specific styles are dark */
+  .bg-light { /* assuming .bg-light is used for header/footer */
+    background-color: var(--tf-footer-bg-color) !important; /* Important to override bootstrap utility */
+  }
+}
+
+/* Additional adjustments for specific elements if needed */
+body.dark-mode .card {
+  background-color: var(--bs-card-bg);
+  border-color: var(--bs-card-border-color);
+  color: var(--bs-card-color);
+}
+
+body.dark-mode .card-header, body.dark-mode .card-footer {
+  background-color: var(--bs-card-cap-bg);
+  color: var(--bs-card-cap-color);
+  border-top-color: var(--bs-card-border-color); /* Ensure border is also themed */
+}
+
+body.dark-mode .text-muted {
+  color: var(--bs-gray-600) !important;
+}
+
+body.dark-mode .navbar {
+  background-color: var(--tf-footer-bg-color) !important; /* Ensure navbar background is dark */
+}
+
+body.dark-mode .navbar-brand, body.dark-mode .nav-link {
+  color: var(--bs-navbar-color) !important;
+}
+
+body.dark-mode .navbar-brand:hover, body.dark-mode .nav-link:hover {
+  color: var(--bs-navbar-hover-color) !important;
+}
+
+/* Rouge syntax highlighting for dark mode */
+/* You might want to link to a specific dark Rouge theme here, 
+   or override its variables if it uses them.
+   For now, let's assume 'css/rouge/base16.dark.css' will be used
+   and linked separately in the HTML when dark mode is active. */
