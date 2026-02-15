@@ -1,11 +1,984 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const skills = [
+  { name: 'Python', category: 'core' },
+  { name: 'Odoo ERP', category: 'core' },
+  { name: 'Business Analyst', category: 'business' },
+  { name: 'Comptabilité', category: 'business' },
+  { name: 'Développement Odoo', category: 'core' },
+  { name: 'Odoo.sh', category: 'devops' },
+  { name: 'Support Utilisateur', category: 'business' },
+  { name: 'T-SQL', category: 'data' },
+  { name: 'API Integration', category: 'devops' },
+  { name: 'SQL', category: 'data' },
+  { name: 'Pandas', category: 'data' },
+  { name: 'Flux métier', category: 'business' },
+  { name: 'MRP', category: 'business' },
+  { name: 'CRM', category: 'business' },
+  { name: 'Javascript', category: 'core' },
+];
+
+const projects = [
+  {
+    title: 'OKB | Automotive Paint & Detailing Supplies',
+    year: '2023',
+    description: 'Implémentation complète d\'Odoo pour une entreprise de fournitures automobiles. Gestion des stocks, ventes, et processus métier.',
+    tags: ['Odoo', 'E-commerce', 'Inventory'],
+    image: '/projects/okb.jpg'
+  },
+  {
+    title: 'Au fil des Couleurs',
+    year: '2023',
+    description: 'Migration réussie d\'Odoo v14 vers v16. Mise à niveau des modules, migration des données, et formation des utilisateurs.',
+    tags: ['Migration', 'Odoo v16', 'Training'],
+    image: '/projects/afc.jpg'
+  }
+];
+
+const articles = [
+  {
+    title: 'Implémenter un ERP Odoo dans une PME de fabrication métallique',
+    date: '26 août 2024',
+    excerpt: 'Guide complet pour réussir l\'implémentation d\'Odoo dans le secteur de la fabrication métallique.',
+    slug: 'erp-pme-fabrication-metallique'
+  },
+  {
+    title: 'Réussir son projet ERP en fabrication 2025',
+    date: '8 janvier 2025',
+    excerpt: 'Les meilleures pratiques et stratégies pour mener à bien un projet ERP dans l\'industrie manufacturière.',
+    slug: 'reussir-projet-erp-fabrication-2025'
+  },
+  {
+    title: 'Les Nouveautés et Améliorations d\'Odoo 18',
+    date: '6 décembre 2024',
+    excerpt: 'Découvrez toutes les nouvelles fonctionnalités et améliorations apportées par Odoo 18.',
+    slug: 'nouveautes-odoo-18'
+  }
+];
 ---
 
 <Layout>
-	<Welcome />
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-in-up">
+          <span class="status-dot"></span>
+          Disponible pour de nouveaux projets
+        </div>
+
+        <h1 class="hero-title animate-fade-in-up delay-1">
+          <span class="hero-greeting">Bonjour, je suis</span>
+          <span class="hero-name text-gradient">Minoumissek Cedrigue Clauvis</span>
+        </h1>
+
+        <p class="hero-role animate-fade-in-up delay-2">
+          <span class="role-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </span>
+          Développeur ODOO ERP & Support Technique
+        </p>
+
+        <p class="hero-description animate-fade-in-up delay-3">
+          Spécialiste ayant plusieurs années d'expérience en personnalisation,
+          intégration et maintenance Odoo, accompagnant les entreprises dans
+          l'optimisation de leurs processus métier.
+        </p>
+
+        <div class="hero-actions animate-fade-in-up delay-4">
+          <a href="mailto:mc0clauvis@gmail.com" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Me contacter
+          </a>
+          <a href="https://wa.me/237698268750" class="btn btn-secondary" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-socials animate-fade-in-up delay-5">
+          <a href="https://github.com/mcclauvis" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/mcclauvis" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/mcclauvis" target="_blank" rel="noopener" class="social-link" aria-label="Twitter/X">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual animate-fade-in delay-2">
+        <div class="code-window">
+          <div class="code-header">
+            <div class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="code-filename">developer.py</span>
+          </div>
+          <pre class="code-content"><code><span class="keyword">class</span> <span class="class-name">OdooDeveloper</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>):
+        <span class="param">self</span>.name = <span class="string">"Minoumissek C. Clauvis"</span>
+        <span class="param">self</span>.role = <span class="string">"Odoo ERP Specialist"</span>
+        <span class="param">self</span>.experience = <span class="string">"5+ years"</span>
+        <span class="param">self</span>.skills = [
+            <span class="string">"Python"</span>, <span class="string">"Odoo"</span>, <span class="string">"PostgreSQL"</span>,
+            <span class="string">"JavaScript"</span>, <span class="string">"API Integration"</span>
+        ]
+
+    <span class="keyword">def</span> <span class="function">deliver_value</span>(<span class="param">self</span>, project):
+        <span class="keyword">return</span> <span class="string">f"Optimized {</span>project<span class="string">} ✓"</span></code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag font-mono">01 / Compétences</span>
+        <h2 class="section-title">Expertise technique</h2>
+        <p class="section-subtitle">
+          Des compétences variées pour couvrir tous les aspects de vos projets ERP
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        {skills.map((skill, index) => (
+          <div class="skill-card" data-category={skill.category} style={`animation-delay: ${index * 0.05}s`}>
+            <span class="skill-name">{skill.name}</span>
+            <span class="skill-indicator"></span>
+          </div>
+        ))}
+      </div>
+
+      <div class="skills-categories">
+        <div class="category-item">
+          <span class="category-dot core"></span>
+          <span>Core Development</span>
+        </div>
+        <div class="category-item">
+          <span class="category-dot business"></span>
+          <span>Business</span>
+        </div>
+        <div class="category-item">
+          <span class="category-dot data"></span>
+          <span>Data & SQL</span>
+        </div>
+        <div class="category-item">
+          <span class="category-dot devops"></span>
+          <span>DevOps & Integration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="section portfolio-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag font-mono">02 / Portfolio</span>
+        <h2 class="section-title">Projets récents</h2>
+        <p class="section-subtitle">
+          Quelques exemples de projets Odoo réalisés avec succès
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        {projects.map((project, index) => (
+          <article class="project-card" style={`animation-delay: ${index * 0.1}s`}>
+            <div class="project-image">
+              <div class="project-overlay">
+                <span class="project-year">{project.year}</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">{project.title}</h3>
+              <p class="project-description">{project.description}</p>
+              <div class="project-tags">
+                {project.tags.map(tag => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="section-cta">
+        <a href="/portfolio" class="btn btn-secondary">
+          Voir tous les projets
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12,5 19,12 12,19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="section blog-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag font-mono">03 / Blog</span>
+        <h2 class="section-title">Articles récents</h2>
+        <p class="section-subtitle">
+          Partage de connaissances et retours d'expérience sur Odoo et les ERP
+        </p>
+      </div>
+
+      <div class="articles-grid">
+        {articles.map((article, index) => (
+          <article class="article-card" style={`animation-delay: ${index * 0.1}s`}>
+            <div class="article-meta">
+              <span class="article-date">{article.date}</span>
+            </div>
+            <h3 class="article-title">
+              <a href={`/blog/${article.slug}`}>{article.title}</a>
+            </h3>
+            <p class="article-excerpt">{article.excerpt}</p>
+            <a href={`/blog/${article.slug}`} class="article-link">
+              Lire l'article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12,5 19,12 12,19"/>
+              </svg>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div class="section-cta">
+        <a href="/blog" class="btn btn-secondary">
+          Voir tous les articles
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12,5 19,12 12,19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-content">
+          <span class="section-tag font-mono">04 / Contact</span>
+          <h2 class="contact-title">
+            Travaillons <span class="text-gradient">ensemble</span>
+          </h2>
+          <p class="contact-description">
+            Vous avez un projet ERP en tête ? Je suis disponible pour discuter
+            de vos besoins et vous accompagner dans la réussite de votre projet.
+          </p>
+
+          <div class="contact-methods">
+            <a href="mailto:mc0clauvis@gmail.com" class="contact-method">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">mc0clauvis@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/237698268750" class="contact-method" target="_blank" rel="noopener">
+              <div class="contact-icon whatsapp">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">WhatsApp</span>
+                <span class="contact-value">+237 698 268 750</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-visual">
+          <div class="contact-card-3d">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="card-logo">&lt;MCC/&gt;</div>
+              <div class="card-name">Minoumissek C. Clauvis</div>
+              <div class="card-role">Odoo ERP Developer</div>
+              <div class="card-divider"></div>
+              <div class="card-contact">mc0clauvis@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: calc(72px + var(--space-4xl)) 0 var(--space-4xl);
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xs) var(--space-md);
+    background: rgba(0, 217, 255, 0.1);
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    border-radius: 100px;
+    font-size: var(--text-sm);
+    color: var(--accent-primary);
+    margin-bottom: var(--space-xl);
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 2s ease infinite;
+  }
+
+  .hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero-greeting {
+    font-size: var(--text-lg);
+    font-weight: 400;
+    color: var(--text-secondary);
+  }
+
+  .hero-name {
+    font-size: var(--text-5xl);
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .hero-role {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+  }
+
+  .role-icon {
+    color: var(--accent-primary);
+  }
+
+  .hero-description {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 540px;
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .hero-socials {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    transition: all var(--transition-base);
+  }
+
+  .social-link:hover {
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 217, 255, 0.2);
+  }
+
+  /* Code Window */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .code-window {
+    width: 100%;
+    max-width: 480px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .code-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .code-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .dot.red { background: #ff5f57; }
+  .dot.yellow { background: #febc2e; }
+  .dot.green { background: #28c840; }
+
+  .code-filename {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  .code-content {
+    padding: var(--space-lg);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--text-sm);
+    line-height: 1.7;
+    overflow-x: auto;
+  }
+
+  .code-content code {
+    color: var(--text-secondary);
+  }
+
+  .keyword { color: #ff79c6; }
+  .class-name { color: #8be9fd; }
+  .function { color: #50fa7b; }
+  .param { color: #ffb86c; }
+  .string { color: #f1fa8c; }
+
+  /* Section Styles */
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-size: var(--text-sm);
+    color: var(--accent-primary);
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.1em;
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .skill-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+  }
+
+  .skill-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .skill-name {
+    font-size: var(--text-sm);
+    font-weight: 500;
+  }
+
+  .skill-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+  }
+
+  .skill-card:hover .skill-indicator {
+    opacity: 1;
+  }
+
+  .skill-card[data-category="core"] { border-left: 3px solid var(--accent-primary); }
+  .skill-card[data-category="business"] { border-left: 3px solid var(--accent-secondary); }
+  .skill-card[data-category="data"] { border-left: 3px solid #22d3ee; }
+  .skill-card[data-category="devops"] { border-left: 3px solid #f472b6; }
+
+  .skills-categories {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+  }
+
+  .category-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+
+  .category-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+
+  .category-dot.core { background: var(--accent-primary); }
+  .category-dot.business { background: var(--accent-secondary); }
+  .category-dot.data { background: #22d3ee; }
+  .category-dot.devops { background: #f472b6; }
+
+  /* Portfolio Section */
+  .portfolio-section {
+    background: var(--bg-secondary);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+  }
+
+  .project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .project-image {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent-gradient);
+    opacity: 0.1;
+  }
+
+  .project-overlay {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+  }
+
+  .project-year {
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--text-xs);
+    color: var(--accent-primary);
+  }
+
+  .project-content {
+    padding: var(--space-xl);
+  }
+
+  .project-title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+  }
+
+  .project-description {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .section-cta {
+    text-align: center;
+  }
+
+  /* Blog Section */
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .article-card {
+    padding: var(--space-xl);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+  }
+
+  .article-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .article-meta {
+    margin-bottom: var(--space-md);
+  }
+
+  .article-date {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .article-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    line-height: 1.4;
+  }
+
+  .article-title a {
+    transition: color var(--transition-fast);
+  }
+
+  .article-title a:hover {
+    color: var(--accent-primary);
+  }
+
+  .article-excerpt {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .article-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--accent-primary);
+    transition: gap var(--transition-fast);
+  }
+
+  .article-link:hover {
+    gap: var(--space-sm);
+  }
+
+  /* Contact Section */
+  .contact-section {
+    background: var(--bg-secondary);
+  }
+
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
+  }
+
+  .contact-title {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+  }
+
+  .contact-description {
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .contact-method {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+  }
+
+  .contact-method:hover {
+    border-color: var(--accent-primary);
+    transform: translateX(8px);
+  }
+
+  .contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--accent-gradient);
+    border-radius: var(--radius-md);
+    color: white;
+  }
+
+  .contact-icon.whatsapp {
+    background: #25d366;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .contact-value {
+    font-size: var(--text-base);
+    font-weight: 500;
+  }
+
+  /* Contact Card 3D */
+  .contact-visual {
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+  }
+
+  .contact-card-3d {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    transform: rotateY(-5deg) rotateX(5deg);
+    transition: transform var(--transition-base);
+  }
+
+  .contact-card-3d:hover {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+
+  .card-glow {
+    position: absolute;
+    inset: -2px;
+    background: var(--accent-gradient);
+    border-radius: var(--radius-xl);
+    opacity: 0.5;
+    filter: blur(20px);
+    z-index: -1;
+  }
+
+  .card-content {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: auto;
+  }
+
+  .card-name {
+    font-size: var(--text-lg);
+    font-weight: 600;
+  }
+
+  .card-role {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+
+  .card-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-gradient);
+    margin: var(--space-md) 0;
+  }
+
+  .card-contact {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero .container {
+      grid-template-columns: 1fr;
+      gap: var(--space-3xl);
+    }
+
+    .hero-visual {
+      order: -1;
+    }
+
+    .hero-name {
+      font-size: var(--text-4xl);
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+      gap: var(--space-3xl);
+    }
+
+    .contact-visual {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: calc(72px + var(--space-2xl));
+    }
+
+    .hero-name {
+      font-size: var(--text-3xl);
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .hero-actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-categories {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-card-3d {
+      width: 280px;
+      height: 180px;
+    }
+  }
+</style>

@@ -1,0 +1,463 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  {
+    title: 'OKB | Automotive Paint & Detailing Supplies',
+    year: '2023',
+    category: 'E-commerce',
+    description: 'Implémentation complète d\'Odoo pour une entreprise spécialisée dans les fournitures de peinture automobile et de detailing. Le projet couvrait l\'ensemble des processus métier de l\'entreprise.',
+    longDescription: 'Ce projet comprenait la mise en place des modules de vente, d\'inventaire, et de comptabilité. Une attention particulière a été portée à la gestion des stocks multi-entrepôts et à l\'intégration avec le site e-commerce existant.',
+    tags: ['Odoo', 'E-commerce', 'Inventory', 'Sales', 'Accounting'],
+    features: [
+      'Gestion des stocks multi-entrepôts',
+      'Intégration e-commerce',
+      'Automatisation des processus de vente',
+      'Reporting personnalisé'
+    ],
+    color: '#00d9ff'
+  },
+  {
+    title: 'Au fil des Couleurs',
+    year: '2023',
+    category: 'Migration',
+    description: 'Migration complète d\'Odoo v14 vers v16 pour une entreprise de décoration intérieure. Le projet incluait la mise à niveau de tous les modules personnalisés et la migration des données.',
+    longDescription: 'Cette migration nécessitait une analyse approfondie des personnalisations existantes, la réécriture de certains modules pour la compatibilité v16, et une stratégie de migration des données sans interruption de service.',
+    tags: ['Migration', 'Odoo v16', 'Training', 'Data Migration'],
+    features: [
+      'Migration sans interruption de service',
+      'Mise à niveau des modules personnalisés',
+      'Formation complète des équipes',
+      'Documentation technique'
+    ],
+    color: '#a855f7'
+  }
+];
+
+const stats = [
+  { value: '15+', label: 'Projets réalisés' },
+  { value: '5+', label: 'Années d\'expérience' },
+  { value: '100%', label: 'Clients satisfaits' },
+  { value: '24/7', label: 'Support disponible' }
+];
+---
+
+<Layout title="Portfolio | Minoumissek Cedrigue Clauvis">
+  <section class="portfolio-hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag font-mono">Portfolio</span>
+        <h1 class="hero-title">
+          Projets <span class="text-gradient">Odoo</span> réalisés
+        </h1>
+        <p class="hero-subtitle">
+          Découvrez une sélection de projets ERP sur lesquels j'ai travaillé,
+          de l'implémentation complète aux migrations complexes.
+        </p>
+      </div>
+
+      <div class="stats-grid">
+        {stats.map((stat, index) => (
+          <div class="stat-card" style={`animation-delay: ${index * 0.1}s`}>
+            <span class="stat-value text-gradient">{stat.value}</span>
+            <span class="stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section">
+    <div class="container">
+      <div class="projects-list">
+        {projects.map((project, index) => (
+          <article class="project-detail" style={`animation-delay: ${index * 0.15}s`}>
+            <div class="project-visual" style={`--project-color: ${project.color}`}>
+              <div class="project-visual-content">
+                <span class="project-number font-mono">0{index + 1}</span>
+                <div class="project-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-header">
+                <div class="project-meta">
+                  <span class="project-category">{project.category}</span>
+                  <span class="project-year">{project.year}</span>
+                </div>
+                <h2 class="project-title">{project.title}</h2>
+              </div>
+
+              <p class="project-description">{project.description}</p>
+              <p class="project-long-description">{project.longDescription}</p>
+
+              <div class="project-features">
+                <h4>Fonctionnalités clés</h4>
+                <ul class="features-list">
+                  {project.features.map(feature => (
+                    <li>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div class="project-tags">
+                {project.tags.map(tag => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <h2 class="cta-title">Vous avez un projet <span class="text-gradient">similaire</span> ?</h2>
+          <p class="cta-description">
+            Je suis disponible pour discuter de vos besoins en implémentation,
+            migration ou personnalisation Odoo.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a href="mailto:mc0clauvis@gmail.com" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Discutons de votre projet
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .portfolio-hero {
+    padding: calc(72px + var(--space-4xl)) 0 var(--space-4xl);
+    background: var(--bg-secondary);
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-4xl);
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: var(--text-sm);
+    color: var(--accent-primary);
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.1em;
+  }
+
+  .hero-title {
+    font-size: var(--text-5xl);
+    font-weight: 800;
+    margin-bottom: var(--space-lg);
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+    transition: all var(--transition-base);
+  }
+
+  .stat-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .stat-value {
+    display: block;
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+  }
+
+  .stat-label {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+
+  /* Projects Section */
+  .projects-section {
+    padding: var(--space-4xl) 0;
+  }
+
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4xl);
+  }
+
+  .project-detail {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: var(--space-3xl);
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+  }
+
+  .project-detail:nth-child(even) {
+    direction: rtl;
+  }
+
+  .project-detail:nth-child(even) > * {
+    direction: ltr;
+  }
+
+  .project-visual {
+    position: relative;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: all var(--transition-base);
+  }
+
+  .project-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--project-color) 0%, transparent 100%);
+    opacity: 0.1;
+  }
+
+  .project-visual:hover {
+    border-color: var(--project-color);
+    box-shadow: 0 0 40px color-mix(in srgb, var(--project-color) 20%, transparent);
+  }
+
+  .project-visual-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+  }
+
+  .project-number {
+    position: absolute;
+    top: var(--space-lg);
+    left: var(--space-lg);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  .project-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    color: var(--accent-primary);
+  }
+
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .project-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-sm);
+  }
+
+  .project-category {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--accent-primary);
+  }
+
+  .project-year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+  }
+
+  .project-title {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+  }
+
+  .project-description {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+
+  .project-long-description {
+    font-size: var(--text-base);
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+  }
+
+  .project-features h4 {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    color: var(--text-secondary);
+  }
+
+  .features-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+  }
+
+  .features-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+
+  .features-list svg {
+    color: var(--accent-primary);
+    flex-shrink: 0;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: var(--space-4xl) 0;
+  }
+
+  .cta-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-2xl);
+    padding: var(--space-3xl);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent-gradient);
+    opacity: 0.03;
+  }
+
+  .cta-title {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+  }
+
+  .cta-description {
+    color: var(--text-secondary);
+    max-width: 500px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .project-detail,
+    .project-detail:nth-child(even) {
+      grid-template-columns: 1fr;
+      direction: ltr;
+    }
+
+    .project-visual {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: var(--text-3xl);
+    }
+
+    .features-list {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
